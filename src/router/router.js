@@ -10,6 +10,9 @@ import BlogHistoryOfBitcoin from "../views/pages/blog/history-of-bitcoin"
 import BlogMoneroAnonymity from "../views/pages/blog/monero-anonymity"
 import BlogHowToSendMoneyAnonymously from "../views/pages/blog/how-to-send-money-anonymously"
 import BlogHowToReceiveMoneyAnonymously from "../views/pages/blog/how-to-receive-money-anonymously"
+import BlogWallet from "../views/pages/blog/wallet"
+import BlogPrivacyCoinsList from "../views/pages/blog/privacy-coins-list"
+import BlogUntraceableMoneyTransferApp from "../views/pages/blog/untraceable-money-transfer-app"
 import Articles from "../views/pages/blog/articles"
 
 const routes = [
@@ -24,6 +27,9 @@ const routes = [
     {path: '/history-of-bitcoin', component: BlogHistoryOfBitcoin },
     {path: '/how-to-send-money-anonymously', component: BlogHowToSendMoneyAnonymously },
     {path: '/how-to-receive-money-anonymously', component: BlogHowToReceiveMoneyAnonymously },
+    {path: '/privacy-coins-list', component: BlogPrivacyCoinsList },
+    {path: '/untraceable-money-transfer-app', component: BlogUntraceableMoneyTransferApp },
+    {path: '/wallet', component: BlogWallet},
 ];
 
 export default createRouter({

@@ -79,9 +79,9 @@ module.exports = (env, argv) => {
             }),
             new HtmlWebpackPlugin({
                 hash: true,
-                name: "Pandora Cash",
-                title: "Privacy coin Untraceable money Anonymous crypto Pandora Cash", //60
-                description: "Privacy coin, anonymous crypto, untraceable cryptocurrency, electronic cash. Untraceable money transfer app. How to send money anonymously. Send money anonymously. How to receive money anonymously. Buy crypto anonymously", //220
+                name: "Pandora Cash - Untraceable Money",
+                title: "Privacy Coin Untraceable Money Anonymous crypto Pandora Cash", //60
+                description: "Privacy coin, anonymous crypto, untraceable cryptocurrency, electronic cash. Untraceable money. Send money anonymously. Buy crypto anonymously", //150
                 keywords: "privacy coin, anonymous crypto, untraceable cryptocurrency, electronic cash, digital gold, send anonymously, Pandora Cash",
                 url: "https://pandoracash.com/",
                 template:  path.resolve(__dirname + '/../src/index.hbs'),

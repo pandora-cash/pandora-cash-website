@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
@@ -8,6 +8,7 @@
   <link rel="icon" type="image/png" sizes="32x32" href="/static/img/fav/pandora-cash-32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="/static/img/fav/pandora-cash-16.png">
   <link rel="manifest" href="https://pandoracash.com/static/manifest.json">
+  <meta name="robots" content="index, follow">
 
   <title><%= htmlWebpackPlugin.options.title %></title>
   <meta name="description" content="<%= htmlWebpackPlugin.options.description %>">
@@ -18,7 +19,12 @@
   <meta property="og:locale" content="en">
   <meta property="og:type" content="website">
   <meta property="og:image" content="/static/img/pandora-cash-img.jpg">
-  <meta property="og:url" content="<%= htmlWebpackPlugin.options.url %>">
+  <meta name="twitter:card" content="summary">
+<!--  <meta name="twitter:site" content="@site_twitter_handle">-->
+  <meta name="twitter:title" content="<%= htmlWebpackPlugin.options.title %>">
+  <meta name="twitter:description" content="<%= htmlWebpackPlugin.options.description %>">
+  <meta name="twitter:image" content="<%= htmlWebpackPlugin.options.image %>">
+  <meta name="twitter:image:alt" content="<%= htmlWebpackPlugin.options.title %>">
   <link rel="manifest" href="https://pandoracash.com/static/manifest.json">
   <link as="style" rel="preload" href="/static/base.css">
   <link as="style" rel="preload" href="/static/common.css">

@@ -19,7 +19,7 @@
             <li><router-link to="/articles" :class="route === '/articles' ? 'active' : ''">{{$t('menu.articles')}}</router-link></li>
             <li>
               <div class="navmobile-select-language">
-                <img :src="'/static/img/lang/'+$i18n.locale+'.png'">
+                <img :src="'/static/img/lang/'+$i18n.locale+'.png'" alt="language">
                 <select class="select-language" v-model="$i18n.locale">
                   <option value="en">English</option>
                   <option value="ru">Русский</option>
@@ -37,7 +37,6 @@
         <div class="container-fluid">
           <router-link class="header__logo" to="/" aria-label="Home">
             <img src="/static/img/logo.png" alt="Pandora Cash" draggable="false" loading="lazy">
-            <h1 class="title --t5">Pandora Cash</h1>
           </router-link>
           <div class="header__right">
             <ul class="header__nav">
@@ -50,7 +49,7 @@
               <li><router-link to="/articles" :class="route === '/articles' ? 'active' : ''">{{$t('menu.articles')}}</router-link></li>
               <li>
                 <div class="header-select-language">
-                  <img :src="'/static/img/lang/'+$i18n.locale+'.png'">
+                  <img :src="'/static/img/lang/'+$i18n.locale+'.png'" alt="language">
                   <select class="select-language" v-model="$i18n.locale">
                     <option value="en">English</option>
                     <option value="ru">Русский</option>
@@ -76,7 +75,7 @@
       <div class="container-fluid --grid-12">
         <div class="footer__brand">
           <div>
-            <img class="footer__brand-logo" src="/static/img/sphere-hero.png" alt="" draggable="false" loading="lazy">
+            <img class="footer__brand-logo" src="/static/img/sphere-hero.png" draggable="false" loading="lazy" alt="background">
           </div>
           <p class="copy">Pandora Cash</p>
         </div>
@@ -97,13 +96,13 @@
               <div class="submenu">
                 <ul>
                   <li class="submenu-inline">
-                    <a href="https://discord.com/invite/Fndv63dejC" target="_blank" rel="noopener"><img src="/static/img/discord.png"/></a>
+                    <a href="https://discord.com/invite/Fndv63dejC" target="_blank" rel="noopener"><img src="/static/img/discord.png" alt="pandora cash discord"/></a>
                   </li>
                   <li class="submenu-inline">
-                    <a href="https://t.me/PandoraCashOfficial" target="_blank" rel="noopener"><img src="/static/img/telegram.png"/></a>
+                    <a href="https://t.me/PandoraCashOfficial" target="_blank" rel="noopener"><img src="/static/img/telegram.png" alt="pandora cash telegram"/></a>
                   </li>
                   <li class="submenu-inline">
-                    <a href="https://github.com/pandora-cash/" target="_blank" rel="noopener"><img src="/static/img/github.png"/></a>
+                    <a href="https://github.com/pandora-cash/" target="_blank" rel="noopener"><img src="/static/img/github.png" alt="pandora cash github"/></a>
                   </li>
                 </ul>
               </div>

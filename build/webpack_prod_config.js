@@ -16,9 +16,10 @@ module.exports = (env, argv) => merge( base(env, argv), {
         new TerserPlugin(),
         new PrerenderSPAPlugin({
 
-            routes: [ '/', '/download', '/privacy-coin', '/privacy-coins', '/what-is-bitcoin',
+            routes: [ '/', '/download', '/articles', '/privacy-coin', '/privacy-coins', '/what-is-bitcoin',
                 '/economic-challenges-bitcoin', '/monero-anonymity', '/how-to-send-money-anonymously',
-            '/how-to-receive-money-anonymously', '/articles', '/history-of-bitcoin'],
+            '/how-to-receive-money-anonymously', '/history-of-bitcoin', '/wallet', '/privacy-coins-list',
+            '/untraceable-money-transfer-app'],
 
             //The options to pass to the renderer class's constructor
             rendererOptions: {
@@ -32,40 +33,80 @@ module.exports = (env, argv) => merge( base(env, argv), {
 
                 //60 letters
                 const titles = {
-                    '/download': 'Download Desktop Privacy Coin Wallet - untraceable money app',
-                    '/privacy-coin': "Privacy coin",
+                    '/download':
+                       //                                                            !60 end
+                        'Download Desktop Privacy Coin Wallet - untraceable money app',
+                    "articles":
+                        "Articles | Privacy is the Pandora's Box",
+                    '/privacy-coin':
+                        "Privacy coin",
                     '/privacy-coins': "Privacy coins",
-                    '/monero-anonymity': "Monero anonymity",
-                    "/what-is-bitcoin": "What is Bitcoin",
-                    "/economic-challenges-bitcoin": "Economic Challenges of Bitcoin",
-                    "/history-of-bitcoin": "History of Bitcoin",
-                    "/how-to-send-money-anonymously": "How to send Money anonymously",
-                    "/how-to-receive-money-anonymously": "How to receive Money anonymously",
+                    '/monero-anonymity':
+                        "Monero anonymity",
+                    "/what-is-bitcoin":
+                        "What is Bitcoin",
+                    "/economic-challenges-bitcoin":
+                        "Economic Challenges of Bitcoin",
+                    "/history-of-bitcoin":
+                        "History of Bitcoin",
+                    "/how-to-send-money-anonymously":
+                        "How to send Money anonymously",
+                    "/how-to-receive-money-anonymously":
+                        "How to receive Money anonymously",
+                    "/wallet":
+                        "Pandora Wallet",
+                    "/privacy-coins-list":
+                        "Privacy Coins List",
+                    '/untraceable-money-transfer-app':
+                        "Untraceable Money Transfer App",
                 }
 
-                //220
+                //150
                 const descriptions = {
-                    '/download': 'Pandora Cash Desktop Privacy Coin Wallet is available for download. You can download and install this untraceable money transfer app for free.',
-                    '/privacy-coin': "Privacy coin is a cryptocurrency that enables anonymous and private blockchain transactions by concealing their source and destination. This privacy coin employs a variety of techniques, such as hiding a user's actual wallet balance and address and combining multiple transactions to avoid chain analysis",
-                    '/privacy-coins': "Privacy coins are a group of cryptocurrencies that enable anonymous and private blockchain transactions by concealing their source and destination. These anonymous crypto employ a variety of techniques, such as hiding a user's actual wallet balance and address and combining multiple transactions to avoid chain analysis",
-                    '/monero-anonymity': "Monero anonymity cryptocurrency can provide quick, inexpensive, and anonymous transactions. Monero privacy creates a transaction using Ring CT (confidential transactions) in a way that tx outputs are mixed with similar outputs from the entire TXO (transaction output) set without disclosing the amounts to anyone.",
-                    "/what-is-bitcoin": "What is Bitcoin? The first and most well-known cryptocurrency, Bitcoin, is what it stands for. Through the use of a decentralized protocol, cryptography, and a mechanism to reach international consensus on the status of a regularly updated public transaction ledger known as a \"blockchain\", it permits p2p exchange of value.",
-                    "/economic-challenges-bitcoin": "Presenting most prominent economic challenges faced by bitcoin is presently facing.  What needs to happen for consumers to start using bitcoin on a large scale, as well as the biggest challenges to its mainstream adoption.",
-                    "/history-of-bitcoin": "The history of Bitcoin starts before the 2008 White Paper. The history of Bitcoin, like most human inventions, is constantly evolving. Bitcoin was originally worth next to nothing. The inventor of Bitcoin remains a mystery. The transaction that first gave Bitcoin monetary value was in 2009.",
-                    "/how-to-send-money-anonymously": "Only cash, money orders, prepaid disposable cards, or having a third party physically hand them cash are truly completely anonymous ways to send money anonymously. You can attempt to send money through private payment methods using fictitious names and disposable email addresses.",
-                    "/how-to-receive-money-anonymously": "If you want to receive money anonymously, there are a few techniques . Although some money transfer services, such as PayPal and Western Union, let you receive money anonymously, the transfer itself is not entirely anonymous. Cash, money orders, and prepaid debit cards are the only anonymous methods.",
+                    '/download':
+                       //                                                                                                                                                      !150 end
+                        'Pandora Cash Desktop Privacy Coin Wallet is available for download. Download and install untraceable money transfer app for free. Download wallet now!',
+                    "/articles":
+                        "Pandora Cash Privacy Articles. Open the Pandora's Box. Find Privacy and Security articles. Learn how to regain your privacy online.",
+                    '/privacy-coin':
+                        "Privacy coin enables anonymous blockchain transactions. A privacy coin is anonymous by employing various techniques. A privacy coin is untraceable.",
+                    '/privacy-coins':
+                        "Privacy coins enable anonymous crypto transactions. Privacy coins make untraceable payments avoiding chain analysis. Find most anonymous privacy coins",
+                    '/monero-anonymity':
+                        "Monero anonymity provides anonymous transactions. Monero anonymity is using Ring CT to mix outputs. Monero anonymity doesn't disclose amounts.",
+                    "/what-is-bitcoin":
+                        "What is Bitcoin? Bitcoin is the first a digital cryptocurrency. What is bitcoin mining ? It serves several functions. What is Bitcoin cash worth?",
+                    "/economic-challenges-bitcoin":
+                        "Find the economic challenges bitcoin is facing. Top biggest economic challenges bitcoin has. Bitcoin Economic challenges for mainstream adoption.",
+                    "/history-of-bitcoin":
+                        "The history of Bitcoin starts before 2008. The history of Bitcoin, is constantly evolving. inventor and history of Bitcoin remains a mystery.",
+                    "/how-to-send-money-anonymously":
+                        "Find how to send money anonymously to business associates. We present top 5 methods of how to send money anonymously online! How to money anonymously!",
+                    "/how-to-receive-money-anonymously":
+                        "Find how to receive money anonymously from people! Discover top 7 methods of how to receive money anonymously! How to receive money anonymously online",
+                    "/wallet":
+                        "Learn more about Pandora Wallet. Before choosing Pandora's Wallet, it is important to read these important facts! Download now Pandora's wallet!",
+                    "/privacy-coins-list":
+                        "List of Privacy Coins. Find our Top privacy Coins List. Discover the top 4 privacy coins in our list!. Privacy Coins hide transaction data.",
+                    "/untraceable-money-transfer-app":
+                        "Best untraceable money transfer apps to send money anonymously. Learn about the most popular untraceable money transfer apps available for download."
                 }
 
+                //max 10 keywords
                 const keywords = {
                     '/download': "download, binary, desktop wallet, download wallet, privacy coin wallet, download privacy coin, install wallet",
+                    "privacy": "articles, article, blog, privacy articles, anonymity articles",
                     '/privacy-coin': "privacy coin, privacy coins, privacy cryptocurrency, anonymous crypto, anon crypto, untraceable electronic cash",
                     '/privacy-coins': "privacy coins, privacy coin, privacy cryptocurrencies, anonymous crypto, anon crypto, untraceable electronic cash",
-                    '/monero-anonymity': "monero, xmr, anonymity, privacy, untraceability, untraceable, anon crypto, privacy coin",
-                    "/what-is-bitcoin": "bitcoin, cryptocurrency, crypto, bit coin, blockchain",
-                    "/economic-challenges-bitcoin": "economic, economy, challenges, bitcoin, crypto, cryptocurrency, btc",
-                    "/history-of-bitcoin": "history, bitcoin, price history, launch, cryptocurrency, btc",
+                    '/monero-anonymity': "monero anonymity, monero, xmr, anonymity, privacy, untraceability, untraceable, anon crypto, privacy coin",
+                    "/what-is-bitcoin": "what is bitcoin, bitcoin, cryptocurrency, crypto, bit coin, blockchain",
+                    "/economic-challenges-bitcoin": "economic challenges bitcoin, economic, economy, challenges, bitcoin, crypto, cryptocurrency, btc",
+                    "/history-of-bitcoin": "history of bitcoin, history, bitcoin, price history, launch, cryptocurrency, btc",
                     "/how-to-send-money-anonymously": "send, money, anonymously, anonymity, send money, privacy coin, untraceable",
                     "/how-to-receive-money-anonymously": "receive, money, anonymously, anonymity, receive money, privacy coin, untraceable, prepaid debit cards",
+                    "/wallet": "pandora wallet, pandora, pandora's, wallet, pandora's wallet",
+                    "/privacy-coins-list": "privacy coins list, privacy, coins, list, privacy coins, top 4",
+                    "/untraceable-money-transfer-app": "untraceable money transfer app, app, untraceable money, transfer, transfer app",
                 }
 
                 const images = {
@@ -77,6 +118,9 @@ module.exports = (env, argv) => merge( base(env, argv), {
                     "/history-of-bitcoin": "/static/img/articles/history-of-bitcoin.jpg",
                     "/how-to-send-money-anonymously": "/static/img/articles/how-to-send-money-anonymously.jpg",
                     "/how-to-receive-money-anonymously": "/static/img/articles/how-to-receive-money-anonymously.jpg",
+                    "/wallet": "/static/img/articles/pandora-wallet.jpg",
+                    "/privacy-coins-list": "/static/img/articles/privacy-coins-list.jpg",
+                    "/untraceable-money-transfer-app": "/static/img/articles/untraceable-money-transfer-app.jpg",
                 }
 
                 if (titles[context.route]) {
@@ -87,6 +131,14 @@ module.exports = (env, argv) => merge( base(env, argv), {
                     context.html = context.html.replace(
                         /<meta property="og:title" content="[^<]*">/i,
                         `<meta property="og:title" content="${titles[context.route]}">`
+                    )
+                    context.html = context.html.replace(
+                        /<meta property="twitter:title" content="[^<]*">/i,
+                        `<meta property="twitter:title" content="${titles[context.route]}">`
+                    )
+                    context.html = context.html.replace(
+                        /<meta property="twitter:image:alt" content="[^<]*">/i,
+                        `<meta property="twitter:image:alt" content="${titles[context.route]}">`
                     )
                 }
 
@@ -99,6 +151,10 @@ module.exports = (env, argv) => merge( base(env, argv), {
                         /<meta property="og:description" content="[^<]*">/i,
                         `<meta property="og:description" content="${descriptions[context.route]}">`
                     )
+                    context.html = context.html.replace(
+                        /<meta property="twitter:description" content="[^<]*">/i,
+                        `<meta property="twitter:description" content="${descriptions[context.route]}">`
+                    )
                 }
 
                 if (keywords[context.route])
@@ -107,11 +163,16 @@ module.exports = (env, argv) => merge( base(env, argv), {
                         `<meta name="keywords" content="${keywords[context.route]}">`
                     )
 
-                if (images[context.route])
+                if (images[context.route]) {
                     context.html = context.html.replace(
                         /<meta property="og:image" content="[^<]*">/i,
                         `<meta property="og:image" content="${images[context.route]}">`
                     )
+                    context.html = context.html.replace(
+                        /<meta property="twitter:image" content="[^<]*">/i,
+                        `<meta property="twitter:image" content="${images[context.route]}">`
+                    )
+                }
 
             }
         }),

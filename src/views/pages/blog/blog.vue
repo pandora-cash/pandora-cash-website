@@ -11,7 +11,7 @@
         <h1 class="heading --h2">{{ title }}</h1>
         <div class="scheaddetail__info">
           <div class="scheaddetail__info-item"><i>
-            <img src="/static/img/icontime.svg" alt="time" draggable="false" loading="lazy"></i><b>31.12.2022</b>
+            <img src="/static/img/icontime.svg" alt="time" draggable="false" loading="lazy"></i><b>03.01.2023</b>
           </div>
         </div>
       </div>
@@ -33,21 +33,21 @@
                   <li>
                     <div class="tooltip">Share on Twitter</div>
                     <a :href="`http://twitter.com/share?text=${title}&amp;url=${page}&amp;hashtags=pcash`"><img
-                        src="/static/img/icontwitter.svg" alt="" draggable="false" loading="lazy"></a>
+                        src="/static/img/icontwitter.svg" alt="share on twitter" draggable="false" loading="lazy"></a>
                   </li>
                   <li>
                     <div class="tooltip">Share on Facebook</div>
                     <a :href="`https://www.facebook.com/sharer.php?u=${page}`"><img
-                        src="/static/img/iconfacebook.svg" alt="" draggable="false" loading="lazy"></a>
+                        src="/static/img/iconfacebook.svg" alt="share on facebook" draggable="false" loading="lazy"></a>
                   </li>
                   <li>
                     <div class="tooltip">Share on LinkedIn</div>
                     <a :href="`https://www.linkedin.com/sharing/share-offsite/?url=${page}`"><img
-                        src="/static/img/iconin.svg" alt="" draggable="false" loading="lazy"></a>
+                        src="/static/img/iconin.svg" alt="share on LinkedIn" draggable="false" loading="lazy"></a>
                   </li>
 <!--                  <li>-->
 <!--                  <div class="tooltip copy-link">Copy the link</div>-->
-<!--                    <a class="clipboard"><img src="/static/img/iconcopylink.svg" alt="" draggable="false" loading="lazy"></a>-->
+<!--                    <a class="clipboard"><img src="/static/img/iconcopylink.svg" alt="copy link" draggable="false" loading="lazy"></a>-->
 <!--                  </li>-->
                 </ul>
               </div>

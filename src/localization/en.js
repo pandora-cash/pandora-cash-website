@@ -13,7 +13,7 @@ export default {
     "home":{
         "hero":{
             "title":"Untraceable Money",
-            "tagline":"Anonymous crypto. Pandora Cash is the fungible and confidential electronic cash. The simplest and quickest privacy coin to use. Anybody can send money anonymously with nobody in between. Pandora Cash is ideal to receive money anonymously.",
+            "tagline":"Anonymous crypto. Pandora Cash is the fungible and confidential electronic cash. The simplest and quickest privacy coin to use. Anybody can send money anonymously. Pandora Cash is ideal to receive money anonymously.",
             "download": "Download now the web wallet",
             "button-webwallet": "web wallet",
             "button-download": "download wallet",

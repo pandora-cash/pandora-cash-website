@@ -40,6 +40,30 @@ export default {
     return {
       articles: [
         {
+          category:"marketing",
+          title: "Untraceable Money Transfer App",
+          flag: "green",
+          description: "",
+          img: "/static/img/articles/untraceable-money-transfer-app.jpg",
+          link: "/untraceable-money-transfer-app",
+        },
+        {
+          category:"marketing",
+          title: "Privacy Coins List",
+          flag: "green",
+          description: "",
+          img: "/static/img/articles/privacy-coins-list.jpg",
+          link: "/privacy-coins-list",
+        },
+        {
+          category:"marketing",
+          title: "Discover the Pandora Wallet",
+          flag: "green",
+          description: "",
+          img: "/static/img/articles/pandora-wallet.jpg",
+          link: "/wallet",
+        },
+        {
           category:"privacy",
           title: "How to send money anonymously?",
           flag: "red",
