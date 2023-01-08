@@ -61,7 +61,7 @@ export default {
           flag: "green",
           description: "",
           img: "/static/img/articles/pandora-wallet.jpg",
-          link: "/wallet",
+          link: "/pandora-wallet",
         },
         {
           category:"privacy",

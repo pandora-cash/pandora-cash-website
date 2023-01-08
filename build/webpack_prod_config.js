@@ -18,7 +18,7 @@ module.exports = (env, argv) => merge( base(env, argv), {
 
             routes: [ '/', '/download', '/articles', '/privacy-coin', '/privacy-coins', '/what-is-bitcoin',
                 '/economic-challenges-bitcoin', '/monero-anonymity', '/how-to-send-money-anonymously',
-            '/how-to-receive-money-anonymously', '/history-of-bitcoin', '/wallet', '/privacy-coins-list',
+            '/how-to-receive-money-anonymously', '/history-of-bitcoin', '/pandora-wallet', '/privacy-coins-list',
             '/untraceable-money-transfer-app'],
 
             //The options to pass to the renderer class's constructor
@@ -53,7 +53,7 @@ module.exports = (env, argv) => merge( base(env, argv), {
                         "How to send Money anonymously",
                     "/how-to-receive-money-anonymously":
                         "How to receive Money anonymously",
-                    "/wallet":
+                    "/pandora-wallet":
                         "Pandora Wallet",
                     "/privacy-coins-list":
                         "Privacy Coins List",
@@ -84,7 +84,7 @@ module.exports = (env, argv) => merge( base(env, argv), {
                         "Find how to send money anonymously to business associates. We present top 5 methods of how to send money anonymously online! How to money anonymously!",
                     "/how-to-receive-money-anonymously":
                         "Find how to receive money anonymously from people! Discover top 7 methods of how to receive money anonymously! How to receive money anonymously online",
-                    "/wallet":
+                    "/pandora-wallet":
                         "Learn more about Pandora Wallet. Before choosing Pandora's Wallet, it is important to read these important facts! Download now Pandora's wallet!",
                     "/privacy-coins-list":
                         "List of Privacy Coins. Find our Top privacy Coins List. Discover the top 4 privacy coins in our list!. Privacy Coins hide transaction data.",
@@ -95,7 +95,7 @@ module.exports = (env, argv) => merge( base(env, argv), {
                 //max 10 keywords
                 const keywords = {
                     '/download': "download, binary, desktop wallet, download wallet, privacy coin wallet, download privacy coin, install wallet",
-                    "privacy": "articles, article, blog, privacy articles, anonymity articles",
+                    "/articles": "articles, article, blog, privacy articles, anonymity articles",
                     '/privacy-coin': "privacy coin, privacy coins, privacy cryptocurrency, anonymous crypto, anon crypto, untraceable electronic cash",
                     '/privacy-coins': "privacy coins, privacy coin, privacy cryptocurrencies, anonymous crypto, anon crypto, untraceable electronic cash",
                     '/monero-anonymity': "monero anonymity, monero, xmr, anonymity, privacy, untraceability, untraceable, anon crypto, privacy coin",
@@ -104,7 +104,7 @@ module.exports = (env, argv) => merge( base(env, argv), {
                     "/history-of-bitcoin": "history of bitcoin, history, bitcoin, price history, launch, cryptocurrency, btc",
                     "/how-to-send-money-anonymously": "send, money, anonymously, anonymity, send money, privacy coin, untraceable",
                     "/how-to-receive-money-anonymously": "receive, money, anonymously, anonymity, receive money, privacy coin, untraceable, prepaid debit cards",
-                    "/wallet": "pandora wallet, pandora, pandora's, wallet, pandora's wallet",
+                    "/pandora-wallet": "pandora wallet, pandora, pandora's, wallet, pandora's wallet",
                     "/privacy-coins-list": "privacy coins list, privacy, coins, list, privacy coins, top 4",
                     "/untraceable-money-transfer-app": "untraceable money transfer app, app, untraceable money, transfer, transfer app",
                 }
@@ -118,7 +118,7 @@ module.exports = (env, argv) => merge( base(env, argv), {
                     "/history-of-bitcoin": "/static/img/articles/history-of-bitcoin.jpg",
                     "/how-to-send-money-anonymously": "/static/img/articles/how-to-send-money-anonymously.jpg",
                     "/how-to-receive-money-anonymously": "/static/img/articles/how-to-receive-money-anonymously.jpg",
-                    "/wallet": "/static/img/articles/pandora-wallet.jpg",
+                    "/pandora-wallet": "/static/img/articles/pandora-wallet.jpg",
                     "/privacy-coins-list": "/static/img/articles/privacy-coins-list.jpg",
                     "/untraceable-money-transfer-app": "/static/img/articles/untraceable-money-transfer-app.jpg",
                 }
