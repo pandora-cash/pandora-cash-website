@@ -15,12 +15,6 @@ const i18n = createI18n({
     },
 })
 
-const app = Vue.createApp({
-    render () {
-        return Vue.h( App, {});
-    }
-});
-
 document.addEventListener('DOMContentLoaded', function () {
 
 

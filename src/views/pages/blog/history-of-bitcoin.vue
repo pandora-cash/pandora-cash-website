@@ -1,5 +1,5 @@
 <template>
-  <blog title="History of Bitcoin" img="/static/img/articles/history-of-bitcoin.jpg">
+  <blog title="History of Bitcoin" img="/static/img/articles/history-of-bitcoin.jpg" :date="new Date('3 Jan 2023')">
 
     <p>
       Why and when was it created? Bitcoin is a now famous crypto-currency. But why and when was it created? Here's a quick look at the history of Bitcoin.
@@ -114,9 +114,18 @@
 <script>
 import Blog from "./blog";
 import PcashSummary from "./sections/pcash-summary";
+import Meta from "../../../meta";
 
-require('./article.css')
 export default {
   components: {PcashSummary, Blog},
+
+  beforeCreate(){
+    Meta.SetTitle("History of Bitcoin")
+    Meta.SetDescription("The history of Bitcoin starts before 2008. The history of Bitcoin, is constantly evolving. inventor and history of Bitcoin remains a mystery.")
+    Meta.SetKeywords("history of bitcoin, history, bitcoin, price history, launch, cryptocurrency, btc")
+    Meta.SetImage("/static/img/articles/history-of-bitcoin.jpg")
+    Meta.SetUrl("/history-of-bitcoin")
+    Meta.SetType("article")
+  }
 }
 </script>

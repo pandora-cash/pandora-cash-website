@@ -5,14 +5,14 @@
 
         <div class="scmainblog__texttop">
           <label class="labelmain">Faster and Safer</label>
-          <h2 class="heading">Download Desktop Wallet</h2>
+          <h1 class="--h2 heading">Download Desktop Wallet</h1>
         </div>
 
         <div class="scmainblog__post">
           <div class="scmainblog__post-list">
             <div class="scmainblog__item scmaindownload__item --fadeInTop is-inview">
               <div class="contentblog">
-                <h3 class="heading --h3">Windows</h3>
+                <h2 class="heading --h3">Windows</h2>
                 <div class="info-div">
                   <div class="info">
                     <a class="btnlink"
@@ -35,7 +35,7 @@
 
             <div class="scmainblog__item scmaindownload__item --fadeInTop is-inview">
               <div class="contentblog">
-                <h3 class="heading --h3">Linux</h3>
+                <h2 class="heading --h3">Linux</h2>
                 <div class="info-div">
                   <div class="info">
                     <a class="btnlink"
@@ -58,7 +58,7 @@
 
             <div class="scmainblog__item scmaindownload__item --fadeInTop is-inview">
               <div class="contentblog">
-                <h3 class="heading --h3">Mac</h3>
+                <h2 class="heading --h3">Mac</h2>
                 <div class="info-div">
                   <div class="info">
                     <a class="btnlink"
@@ -93,9 +93,20 @@
 
 <script>
 import layout from "../layout"
+import Meta from "../../meta";
 
 export default {
   components: {layout},
+
+  beforeCreate(){
+    Meta.SetTitle("Download Desktop Privacy Coin Wallet - untraceable money app")
+    Meta.SetDescription("Pandora Cash Desktop Privacy Coin Wallet is available for download. Download and install untraceable money transfer app for free. Download wallet now!")
+    Meta.SetKeywords("download, binary, desktop wallet, download wallet, privacy coin wallet, download privacy coin, install wallet")
+    Meta.SetImage()
+    Meta.SetUrl("/download")
+    Meta.SetType()
+  }
+
 }
 </script>
 

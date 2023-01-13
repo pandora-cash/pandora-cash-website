@@ -178,6 +178,7 @@ import partners from "../partners"
 import dapps from "../dapps"
 import join from "../join";
 import layout from "../layout"
+import Meta from "../../meta"
 
 export default {
 
@@ -186,6 +187,15 @@ export default {
   mounted() {
     theme.init()
     window.scrollTo(0, 0)
+  },
+
+  beforeCreate(){
+    Meta.SetTitle()
+    Meta.SetDescription()
+    Meta.SetKeywords()
+    Meta.SetImage()
+    Meta.SetUrl("/")
+    Meta.SetType()
   }
 
 }

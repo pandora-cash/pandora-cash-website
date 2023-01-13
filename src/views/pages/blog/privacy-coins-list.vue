@@ -1,5 +1,5 @@
 <template>
-  <blog title="Privacy Coins List" img="/static/img/articles/privacy-coins-list.jpg">
+  <blog title="Privacy Coins List" img="/static/img/articles/privacy-coins-list.jpg" :date="new Date('3 Jan 2023')">
 
     <p>
       This comprehensive guide compiled a privacy coins list. First let's explain how privacy coins function, and the pros and cons of using them. The guide also offers tips on staying safe while using privacy coins.
@@ -77,9 +77,18 @@
 <script>
 import Blog from "./blog";
 import LearnMore from "./sections/learn-more";
+import Meta from "../../../meta";
 
-require('./article.css')
 export default {
   components: {LearnMore, Blog},
+
+  beforeCreate(){
+    Meta.SetTitle("Privacy Coins List")
+    Meta.SetDescription("List of Privacy Coins. Find our Top privacy Coins List. Discover the top 4 privacy coins in our list!. Privacy Coins hide transaction data.")
+    Meta.SetKeywords("privacy coins list, privacy, coins, list, privacy coins, top")
+    Meta.SetImage("/static/img/articles/privacy-coins-list.jpg")
+    Meta.SetUrl("/privacy-coins-list")
+    Meta.SetType("article")
+  }
 }
 </script>

@@ -1,12 +1,10 @@
 {
   "name": "pandora_cash_website",
   "scripts": {
-    "build": "webpack --config build/webpack_prod_config.js",
+    "build": "webpack --config build/webpack_prod_config.js --mode production",
     "dev": "webpack serve --config build/webpack_hot_loader_config.js  --hot --host 0.0.0.0"
   },
   "dependencies": {
-    "html-webpack-plugin": "^5.5.0",
-    "puppeteer": "^19.4.1",
     "vue": "^3.2.33",
     "vue-i18n": "^9.2.0-beta.35",
     "vue-router": "^4.0.12",
@@ -29,6 +27,9 @@
     "webpack-dev-middleware": "^5.3.1",
     "webpack-dev-server": "^4.7.4",
     "webpack-hot-middleware": "~2.25.1",
-    "webpack-merge": "~4.2.2"
+    "webpack-merge": "~4.2.2",
+    "html-webpack-plugin": "^5.5.0",
+    "puppeteer": "^19.4.1",
+    "copy-webpack-plugin": "^11.0.0"
   }
 }

@@ -1,5 +1,5 @@
 <template>
-  <blog img="/static/img/articles/economic-challenges-bitcoin.jpg" title="The economic challenges of bitcoin">
+  <blog img="/static/img/articles/economic-challenges-bitcoin.jpg" title="The economic challenges of bitcoin" :date="new Date('3 Jan 2023')">
 
     <p>
       A crypto-currency such as Bitcoin has value only if it is considered a currency by all participants in the monetary system. It therefore needs to be rare, in the sense that it cannot be easily copied (a problem equivalent to that of counterfeit money, for traditional currencies).
@@ -151,8 +151,18 @@
 <script>
 import Blog from "./blog";
 import PcashSummary from "./sections/pcash-summary";
+import Meta from "../../../meta";
 
 export default {
   components: {PcashSummary, Blog},
+
+  beforeCreate(){
+    Meta.SetTitle("Economic Challenges of Bitcoin")
+    Meta.SetDescription("Find the economic challenges bitcoin is facing. Top biggest economic challenges bitcoin has. Bitcoin Economic challenges for mainstream adoption.")
+    Meta.SetKeywords("economic challenges bitcoin, economic, economy, challenges, bitcoin, crypto, cryptocurrency, btc")
+    Meta.SetImage("/static/img/articles/economic-challenges-bitcoin.jpg")
+    Meta.SetUrl("/economic-challenges-bitcoin")
+    Meta.SetType("article")
+  }
 }
 </script>

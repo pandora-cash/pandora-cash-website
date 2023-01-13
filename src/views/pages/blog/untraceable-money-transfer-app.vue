@@ -1,5 +1,5 @@
 <template>
-  <blog title="Untraceable Money Transfer App" img="/static/img/articles/untraceable-money-transfer-app.jpg">
+  <blog title="Untraceable Money Transfer App" img="/static/img/articles/untraceable-money-transfer-app.jpg" :date="new Date('3 Jan 2023')">
 
     <p>
       This thorough guide describes a few untraceable money transfer apps. Let's first go over how untraceable money transfers operate. Additionally, the guide provides advice on how to use these money transfer apps while remaining anonymous.
@@ -120,9 +120,18 @@
 <script>
 import Blog from "./blog";
 import LearnMore from "./sections/learn-more";
+import Meta from "../../../meta";
 
-require('./article.css')
 export default {
   components: {LearnMore, Blog},
+
+  beforeCreate(){
+    Meta.SetTitle("Untraceable Money Transfer App")
+    Meta.SetDescription("Best untraceable money transfer apps to send money anonymously. Learn about the most popular untraceable money transfer apps available for download.")
+    Meta.SetKeywords("untraceable money transfer app, app, untraceable money, transfer, transfer app")
+    Meta.SetImage("/static/img/articles/untraceable-money-transfer-app.jpg")
+    Meta.SetUrl("/untraceable-money-transfer-app")
+    Meta.SetType("article")
+  }
 }
 </script>

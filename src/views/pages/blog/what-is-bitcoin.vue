@@ -1,5 +1,5 @@
 <template>
-  <blog title="What is Bitcoin?" img="/static/img/articles/what-is-bitcoin.jpg">
+  <blog title="What is Bitcoin?" img="/static/img/articles/what-is-bitcoin.jpg" :date="new Date('3 Jan 2023')">
     <p>
       Bitcoin is an experimental system for transferring and verifying property based on a peer-to-peer network without any central authority.
     </p>
@@ -39,9 +39,18 @@
 <script>
 import Blog from "./blog";
 import PcashSummary from "./sections/pcash-summary";
+import Meta from "../../../meta";
 
-require('./article.css')
 export default {
   components: {PcashSummary, Blog},
+
+  beforeCreate(){
+    Meta.SetTitle("What is Bitcoin")
+    Meta.SetDescription("What is Bitcoin? Bitcoin is the first a digital cryptocurrency. What is bitcoin mining ? It serves several functions. What is Bitcoin cash worth?")
+    Meta.SetKeywords("what is bitcoin, bitcoin, cryptocurrency, crypto, bit coin, blockchain")
+    Meta.SetImage("/static/img/articles/what-is-bitcoin.jpg")
+    Meta.SetUrl("/what-is-bitcoin")
+    Meta.SetType("article")
+  }
 }
 </script>

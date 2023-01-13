@@ -1,5 +1,5 @@
 <template>
-  <blog title="Monero Anonymity" img="/static/img/articles/monero-anonymity.jpg">
+  <blog title="Monero Anonymity" img="/static/img/articles/monero-anonymity.jpg" :date="new Date('3 Jan 2023')">
 
     <p>
       The rise of digital currencies over the past few decades means that everything you do is on the blockchain. And the blockchain is immutable, which means it can't be changed. In addition, privacy issues have become a hot topic after leaks that the NSA is spying on everyone and the well-known fact that tech companies like Google and Facebook are collecting all the data. This has led to a high demand for a digital crypto-currency that cannot be tracked. Fortunately, there are solutions that offer both privacy/anonymity and digital use. The most popular of these private crypto-currencies (privacy coins) is Monero.
@@ -83,9 +83,18 @@
 <script>
 import Blog from "./blog";
 import PcashSummary from "./sections/pcash-summary";
+import Meta from "../../../meta";
 
-require('./article.css')
 export default {
   components: {PcashSummary, Blog},
+
+  beforeCreate(){
+    Meta.SetTitle("Monero anonymity")
+    Meta.SetDescription("Monero anonymity provides anonymous transactions. Monero anonymity is using Ring CT to mix outputs. Monero anonymity doesn't disclose amounts.")
+    Meta.SetKeywords("monero anonymity, monero, xmr, anonymity, privacy, untraceability, untraceable, anon crypto, privacy coin")
+    Meta.SetImage("/static/img/articles/monero-anonymity.jpg")
+    Meta.SetUrl("/monero-anonymity")
+    Meta.SetType("article")
+  }
 }
 </script>

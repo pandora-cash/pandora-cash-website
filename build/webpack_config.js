@@ -2,6 +2,8 @@ const path = require('path');
 const webpack = require('webpack')
 const { VueLoaderPlugin } = require('vue-loader')
 const HtmlWebpackPlugin = require("html-webpack-plugin");
+const config = require('../src/config')
+const CopyPlugin = require('copy-webpack-plugin');
 
 module.exports = (env, argv) => {
 
@@ -20,7 +22,8 @@ module.exports = (env, argv) => {
         output: {
             path: path.resolve(__dirname, './../dist'),
             publicPath: '/',
-            filename: 'bundle.js'
+            filename: 'bundle.js',
+            clean: true,
         },
 
         resolve: {
@@ -70,6 +73,11 @@ module.exports = (env, argv) => {
             }]
         },
         plugins: [
+            new CopyPlugin({
+                patterns: [
+                    { from: "static", to: "static" }
+                ],
+            }),
             new webpack.DefinePlugin({
                 __VUE_OPTIONS_API__: true,
                 __VUE_PROD_DEVTOOLS__: false,
@@ -79,11 +87,12 @@ module.exports = (env, argv) => {
             }),
             new HtmlWebpackPlugin({
                 hash: true,
-                name: "Pandora Cash - Untraceable Money",
-                title: "Privacy Coin Untraceable Money Anonymous crypto Pandora Cash", //60
-                description: "Privacy coin, anonymous crypto, untraceable cryptocurrency, electronic cash. Untraceable money. Send money anonymously. Buy crypto anonymously", //150
-                keywords: "privacy coin, anonymous crypto, untraceable cryptocurrency, electronic cash, digital gold, send anonymously, Pandora Cash",
-                url: "https://pandoracash.com/",
+                name: config.name,
+                title: config.title, //60
+                description: config.description, //150
+                keywords: config.keywords,
+                url: config.url,
+                img: config.url + config.img.replace(/^\/|\/$/g, ''),
                 template:  path.resolve(__dirname + '/../src/index.hbs'),
                 filename: path.resolve(__dirname + `/../dist/index.html`) //relative to root of the application
             }),

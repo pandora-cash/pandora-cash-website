@@ -1,5 +1,6 @@
 <template>
   <layout>
+
     <div class="scmainblog --pdtop" style="padding-top: 150px">
       <div id="fixed-bgblurblog" class="container --small">
         <div class="scmainblog__texttop"><label class="labelmain">The articles</label>
@@ -7,6 +8,21 @@
         </div>
 
         <div style="padding-top: 150px"></div>
+
+        <section class="scheaddetail">
+          <div class="container --small">
+            <ul class="scheaddetail__bread breadcrumb" vocab="https://schema.org/" typeof="BreadcrumbList">
+              <li property="itemListElement" typeof="ListItem">
+                <router-link to="/" property="name">Home</router-link>
+                <meta property="position" content="1">
+              </li>
+              <li property="itemListElement" typeof="ListItem">
+                <span property="name">Articles</span>
+                <meta property="position" content="2">
+              </li>
+            </ul>
+          </div>
+        </section>
 
         <div class="blog-tertiary-preview-list" v-for="(it, key ) in articles" :key="`article${key}`">
           <div class="scmainblog__item --fadeInTop is-inview">
@@ -31,8 +47,8 @@
 
 <script>
 import Layout from "../../layout";
+import Meta from "../../../meta";
 
-require('./article.css')
 export default {
   components: {Layout},
 
@@ -133,6 +149,15 @@ export default {
 
   mounted() {
     window.scrollTo(0, 0)
+  },
+
+  beforeCreate(){
+    Meta.SetTitle("Articles | Privacy is the Pandora's Box")
+    Meta.SetDescription("Pandora Cash Privacy Articles. Open the Pandora's Box. Find Privacy and Security articles. Learn how to regain your privacy online.")
+    Meta.SetKeywords("articles, article, blog, privacy articles, anonymity articles")
+    Meta.SetImage()
+    Meta.SetUrl("/articles")
+    Meta.SetType()
   }
 }
 </script>

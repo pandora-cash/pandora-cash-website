@@ -1,5 +1,5 @@
 <template>
-  <blog title="How to send money anonymously" img="/static/img/articles/how-to-send-money-anonymously.jpg">
+  <blog title="How to send money anonymously" img="/static/img/articles/how-to-send-money-anonymously.jpg" :date="new Date('3 Jan 2023')">
 
     <p>
       If you want to learn how to send money anonymously, it's important to consider your options carefully. There are various methods available for making anonymous financial transactions, each with its own pros and cons. Here are some tips on how to send money anonymously online.
@@ -68,9 +68,19 @@
 <script>
 import Blog from "./blog";
 import LearnMore from "./sections/learn-more";
+import Meta from "../../../meta";
 
-require('./article.css')
 export default {
   components: {LearnMore, Blog},
+
+  beforeCreate(){
+    Meta.SetTitle("How to send Money anonymously")
+    Meta.SetDescription("Find how to send money anonymously to business associates. We present top 5 methods of how to send money anonymously online! How to money anonymously!")
+    Meta.SetKeywords("send, money, anonymously, anonymity, send money, privacy coin, untraceable")
+    Meta.SetImage("/static/img/articles/how-to-send-money-anonymously.jpg")
+    Meta.SetUrl("/how-to-send-money-anonymously")
+    Meta.SetType("article")
+  }
+
 }
 </script>

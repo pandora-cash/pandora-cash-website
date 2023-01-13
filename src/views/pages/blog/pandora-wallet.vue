@@ -1,5 +1,5 @@
 <template>
-  <blog img="/static/img/articles/pandora-wallet.jpg" title="Pandora Wallet">
+  <blog img="/static/img/articles/pandora-wallet.jpg" title="Pandora Wallet" :date="new Date('3 Jan 2023')">
 
     <p>
       Pandora Cash is a cryptocurrency that is designed to be private, secure, and untraceable. A Pandora Wallet is a software program that allows you to store, send, and receive Pandora Cash. It is important to keep in mind that, unlike a bank account, you are solely responsible for the safety of your Pandora Cash and the security of your wallet. It is therefore crucial to choose a wallet that is secure and that you understand how to use properly. There are several different types of Pandora Cash wallets available, including desktop wallets, mobile wallets, and online wallets. It is important to carefully consider the pros and cons of each type of wallet before deciding which one is right for you.
@@ -48,7 +48,7 @@
 
     <ul>
       <li>
-        <a href="https://wallet.pandoracash.com/pandora-wallet.vue" title="Pandora Wallet" target="_blank" class="btnlink">
+        <a href="https://wallet.pandoracash.com/" title="Pandora Wallet" target="_blank" class="btnlink">
           wallet.pandoracash.com
         </a>:
         This is a web-based wallet that allows you to manage your Pandora Cash directly from your browser.
@@ -86,9 +86,18 @@
 <script>
 import Blog from "./blog";
 import PcashSummary from "./sections/pcash-summary";
+import Meta from "../../../meta";
 
-require('./article.css')
 export default {
   components: {PcashSummary, Blog},
+
+  beforeCreate(){
+    Meta.SetTitle("Pandora Wallet")
+    Meta.SetDescription("Learn more about Pandora Wallet. Before choosing Pandora's Wallet, it is important to read these important facts! Download now Pandora's wallet!")
+    Meta.SetKeywords("pandora wallet, pandora, pandora's, wallet, pandora's wallet")
+    Meta.SetImage("/static/img/articles/pandora-wallet.jpg")
+    Meta.SetUrl("/pandora-wallet")
+    Meta.SetType("article")
+  }
 }
 </script>

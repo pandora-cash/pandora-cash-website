@@ -1,5 +1,5 @@
 <template>
-  <blog title="Privacy Coin" img="/static/img/articles/privacy-coin.jpg">
+  <blog title="Privacy Coin" img="/static/img/articles/privacy-coin.jpg" :date="new Date('3 Jan 2023')">
 
     <p>
       Are you looking to protect your financial privacy? If so, you may have heard of privacy coin, also known as anonymous or untraceable cryptocurrency. In this ultimate guide, we'll explain what privacy coin are, how they work, and the benefits and drawbacks of using them. We'll also provide tips for staying safe and secure when using privacy coins.
@@ -118,8 +118,17 @@
 <script>
 import Blog from "./blog";
 import LearnMore from "./sections/learn-more";
-require('./article.css')
+import Meta from "../../../meta";
 export default {
   components: {Blog, LearnMore},
+
+  beforeCreate(){
+    Meta.SetTitle("Privacy coin")
+    Meta.SetDescription("Privacy coin enables anonymous blockchain transactions. A privacy coin is anonymous by employing various techniques. A privacy coin is untraceable.")
+    Meta.SetKeywords("privacy coin, privacy coins, privacy cryptocurrency, anonymous crypto, anon crypto, untraceable electronic cash")
+    Meta.SetImage("/static/img/articles/privacy-coin.jpg")
+    Meta.SetUrl("/privacy-coin")
+    Meta.SetType("article")
+  }
 }
 </script>

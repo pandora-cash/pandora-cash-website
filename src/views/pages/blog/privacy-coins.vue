@@ -1,5 +1,5 @@
 <template>
-  <blog title="Privacy Coins" img="/static/img/articles/privacy-coins.jpg">
+  <blog title="Privacy Coins" img="/static/img/articles/privacy-coins.jpg" :date="new Date('3 Jan 2023')">
 
     <h2 class="heading --h3">
       The Ultimate Guide for Enhanced Financial Privacy
@@ -137,9 +137,18 @@
 <script>
 import Blog from "./blog";
 import LearnMore from "./sections/learn-more";
+import Meta from "../../../meta";
 
-require('./article.css')
 export default {
   components: {LearnMore, Blog},
+
+  beforeCreate(){
+    Meta.SetTitle("Privacy coins")
+    Meta.SetDescription("Privacy coins enable anonymous crypto transactions. Privacy coins make untraceable payments avoiding chain analysis. Find most anonymous privacy coins")
+    Meta.SetKeywords("privacy coins, privacy coin, privacy cryptocurrencies, anonymous crypto, anon crypto, untraceable electronic cash")
+    Meta.SetImage("/static/img/articles/privacy-coins.jpg")
+    Meta.SetUrl("/privacy-coin")
+    Meta.SetType("article")
+  }
 }
 </script>
