@@ -9,20 +9,18 @@
 
         <div style="padding-top: 150px"></div>
 
-        <section class="scheaddetail">
-          <div class="container --small">
-            <ul class="scheaddetail__bread breadcrumb" vocab="https://schema.org/" typeof="BreadcrumbList">
-              <li property="itemListElement" typeof="ListItem">
-                <router-link to="/" property="name">Home</router-link>
-                <meta property="position" content="1">
-              </li>
-              <li property="itemListElement" typeof="ListItem">
-                <span property="name">Articles</span>
-                <meta property="position" content="2">
-              </li>
-            </ul>
-          </div>
-        </section>
+        <ul class="scheaddetail__bread breadcrumb" itemscope itemtype="https://schema.org/BreadcrumbList">
+          <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+            <router-link to="/" itemprop="item">
+              <span  itemprop="name">Home</span>
+            </router-link>
+            <meta itemprop="position" content="1">
+          </li>
+          <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+            <span class="current" itemprop="name">Articles</span>
+            <meta itemprop="position"  content="2">
+          </li>
+        </ul>
 
         <div class="blog-tertiary-preview-list" v-for="(it, key ) in articles" :key="`article${key}`">
           <div class="scmainblog__item --fadeInTop is-inview">

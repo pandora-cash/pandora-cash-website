@@ -3,18 +3,22 @@
 
     <div style="padding-top: 150px"/>
 
-    <ul class="scheaddetail__bread breadcrumb" vocab="https://schema.org/" typeof="BreadcrumbList">
-      <li property="itemListElement" typeof="ListItem">
-        <router-link to="/" property="name">Home</router-link>
-        <meta property="position" content="1">
+    <ul class="scheaddetail__bread breadcrumb" itemscope itemtype="https://schema.org/BreadcrumbList">
+      <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+        <router-link to="/" itemprop="item">
+          <span  itemprop="name">Home</span>
+        </router-link>
+        <meta itemprop="position" content="1">
       </li>
-      <li property="itemListElement" typeof="ListItem">
-        <router-link to="/articles" property="name">Articles</router-link>
-        <meta property="position" content="2">
+      <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+        <router-link to="/articles" itemprop="item" :itemid="`${url}articles`">
+          <span  itemprop="name">Articles</span>
+        </router-link>
+        <meta itemprop="position"  content="2">
       </li>
-      <li property="itemListElement" typeof="ListItem">
-        <span class="current" property="name">{{ title }}</span>
-        <meta property="position" content="3">
+      <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+        <span class="current" itemprop="name" >{{ title }}</span>
+        <meta itemprop="position"  content="3">
       </li>
     </ul>
 
@@ -83,7 +87,7 @@
 
 <script>
 import layout from "../../layout"
-
+import config from "../../../config"
 export default {
   components: {layout},
   props: {
@@ -91,6 +95,11 @@ export default {
     img: {default: ""},
     date: {default: null},
     dateModified: {default: null},
+  },
+  computed:{
+    url(){
+      return config.url
+    }
   },
   data(){
     return {
