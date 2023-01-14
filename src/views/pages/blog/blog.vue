@@ -11,14 +11,8 @@
         <meta itemprop="position" content="1">
       </li>
       <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
-        <router-link to="/articles" itemprop="item" :itemid="`${url}articles`">
-          <span  itemprop="name">Articles</span>
-        </router-link>
-        <meta itemprop="position"  content="2">
-      </li>
-      <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
         <span class="current" itemprop="name" >{{ title }}</span>
-        <meta itemprop="position"  content="3">
+        <meta itemprop="position"  content="2">
       </li>
     </ul>
 
