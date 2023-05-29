@@ -28,17 +28,8 @@ module.exports = (env, argv) => merge( base(env, argv), {
                 injectProperty: '__PRERENDER_INJECTED',
                 maxConcurrentRoutes: 4,
                 renderAfterDocumentEvent: "render-event",
-                // renderAfterElementExists: '#website',
-                renderAfterElementExists: "",
-                timeout: 10000,
+                renderAfterElementExists: '#website',
             },
-
-            postProcess: function (context) {
-                context.html = context.html.replace(
-                    /<script src="w3counter">/i,
-                    `<script type="text/javascript" src="https://www.w3counter.com/tracker.js?id=148030">`
-                )
-            }
 
         }),
     ]
