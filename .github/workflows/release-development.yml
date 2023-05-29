@@ -20,23 +20,11 @@ jobs:
         with:
           node-version: 18.x
 
-      - name: install other libraries
-        run: |
-          sudo apt-get install zopfli
-          sudo apt-get install brotli
-
       - name: install dependencies
         run: npm install
 
       - name: npm build
         run: npm run build
-
-      - name: zopfli
-        run: |
-          cd dist
-          rm bundle.js.gz
-          zopfli bundle.js
-          brotli -o bundle.js.br bundle.js
 
       - name: zip
         run: (cd dist; zip -r ../build.zip *)
