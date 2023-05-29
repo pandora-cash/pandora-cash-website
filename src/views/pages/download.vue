@@ -197,7 +197,7 @@
                     <div>
                       <a class="btnlink"
                          href="https://github.com/pandora-cash/pandora-pay-flutter/releases/download/latest/Runner.app.zip"
-                         target="_blank">app.zip</a>
+                         target="_blank">app.zip (not signed)</a>
                     </div>
                     <div class="info__date"><p>83 mb</p></div>
                   </div>
@@ -205,7 +205,7 @@
                     <div>
                       <a class="btnlink"
                          href="https://github.com/pandora-cash/pandora-pay-flutter/releases/download/latest/Runner.xcarchive.zip"
-                         target="_blank">xcarchive.zip</a>
+                         target="_blank">xcarchive.zip  (not signed)</a>
                     </div>
                     <div class="info__date"><p>151 mb</p></div>
                   </div>
